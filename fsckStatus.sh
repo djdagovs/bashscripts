@@ -125,7 +125,7 @@ main() {
 
         ## count excluded disks
         wc=$(echo ${disktype_excluded} |sed 's/|/ /g' |wc -w)
-        echo "$wc disks were types excluded by string: [${disktype_excluded}]"
+        echo "$wc disks types were excluded by string: [${disktype_excluded}]"
 
         ## count failed disks
         wcfd=$(check_disk list_failed_disks |wc -w)
