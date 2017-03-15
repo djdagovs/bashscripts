@@ -34,7 +34,7 @@ if [ ! -f "$FOLDER" ]; then
 fi
 
 
-for i in $(find $1 -iname *_web.jp*g -type f); do
+for i in $(find $1 -iname *.jp*g -type f); do
     stamp=$(stat --format '%y %n' $i);
     filedate=$(echo $stamp |awk {'print $1'})
     jpegoptim -o --strip-all $i
